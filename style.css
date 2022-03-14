@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+
+/* #### Text */
+
+--Pale-Violet: hsl(276, 100%, 81%);
+--Moderate-Violet : hsl(276, 55%, 52%);
+--Desaturated-Dark-Violet : hsl(271, 15%, 43%);
+--Grayish-Blue : hsla(206, 7%, 79%, 0.49);
+--Very-Dark-Desaturated-Violet : hsl(271, 36%, 24%);
+--Dark-Grayish-Violet : hsl(270, 7%, 64%);
+
+/* #### Gradients */
+
+/* These t-o colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+--Light-Magenta: hsl(293, 100%, 63%);
+--Light-Violet: hsl(264, 100%, 61%);
+
+/* ### Se;condary */
+
+--White: hsl(0, 0%, 100%);
+--Light-Grayish-Violet: hsl(270, 20%, 96%);
+--Very-Dark-Desaturated-Violet : hsl(271, 36%, 24%);
+--Very-Light-Magenta : hsl(289, 100%, 72%);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--Light-Grayish-Violet);
+    font-family: Rubik;
+    font-size: 16px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+/* background gradient bar */
+
+.background-bar{
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
+    height: 70%;
+    width: 80%;
+    transform: translateX(-10rem);
+    border-bottom-right-radius: 25rem;
+}
+
+
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:6rem;
+}
+svg{
+    fill: var(--White);
+}
+
+
+
+.mobile{
+    background-color:var(--White);
+    width: 350px;
+    margin: 5rem 0;
+    padding: .8rem;
+    border-radius: 2rem;
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.313);
+}
+
+.display{
+    background-color: var(--Light-Grayish-Violet);
+    border-radius: 1.5rem;
+}
+
+
+
+.mobile-head{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    background:linear-gradient(to left,var(--Light-Magenta),var(--Light-Violet));
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    position: relative;
+}
+
+/* Mobile notch */
+
+.mobile-head::after{
+    content: "";
+    background-color: var(--White);
+    top:0;
+    left: 20%;
+    height: 25%;
+    width: 60%;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    position: absolute;
+}
+
+
+
+
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .8rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+.profile-content{
+    display: flex;
+    align-items: center;
+}
+.back{
+    width: 5%;
+}
+.profile-content img{
+    width: 10%;
+    margin: .6rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.name p{
+    color: var(--White);
+    font-weight: 500;
+    font-size: 15px;
+}
+.status p{
+    color: var(--Pale-Violet);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
+
+
+
+
+.chats{
+    padding:1rem .5rem;
+}
+.chats p{
+    font-size: 12px;
+}
+
+.receive-msg p{
+    background-color: var(--Grayish-Blue);
+    width: 70%;
+    padding: .8rem;
+    margin-bottom: .8rem;
+    border-radius: 1rem;
+    border-bottom-left-radius: .2rem;
+    color: var(--Moderate-Violet);
+}
+
+
+
+
+.dog-img{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    align-content: right;
+    flex-direction: row-reverse ;
+}
+.dog-img img{
+    width: 20%;
+    border-radius: .5rem;
+    margin-left: .5rem;
+}
+
+
+
+
+
+
+.send-msg{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.send-msg p{
+    background-color: var(--White);
+    box-shadow: 0 0 20px  rgba(0, 0, 0, 0.259);
+    width: 70%;
+    padding: .8rem;
+    margin-bottom: .8rem;
+    border-radius: 1rem;
+    border-bottom-right-radius: .2rem;
+    color: rgba(0, 0, 0, 0.776);
+}
+
+
+
+
+
+.plan{
+    background:linear-gradient(to right,var(--Light-Magenta),var(--Light-Violet));
+    margin-bottom: .8rem;
+    width: 80%;
+    border-radius: 1rem;
+    border-bottom-left-radius: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem;
+    color: white;
+}
+.plan p{
+    display: flex;
+    align-items: center;
+}
+.plan p img{
+    width: 20px;
+    margin-right: 1rem;
+}
+
+.price{
+    font-weight: 700;
+}
+
+
+
+
+
+input{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    outline: none;
+    position: relative;
+    margin-top: .5rem;
+}
+.input{
+    position: relative;
+    width: 100%;
+}
+.input ::placeholder{
+    color:var(--Dark-Grayish-Violet);
+}
+.input svg{
+    width: 35px;
+    height: 35px;
+    padding: .5rem;
+    transform: rotateZ(180deg);
+    background-color:var(--Very-Dark-Desaturated-Violet);
+    border-radius: 50%;
+    position: absolute;
+    top: 26%;
+    right: 2%;
+    cursor: pointer;
+    transition: .5s;
+}
+.input svg:hover{
+    transform: rotateZ(540deg);
+}
+
+
+
+
+
+
+.text-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text-box h1{
+    color: var(--Very-Dark-Desaturated-Violet);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.para{
+    color: var(--Dark-Grayish-Violet);
+    line-height: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+
+
+
+
+
+@media screen and (min-width:600px) {
+    
+
+    
+    .background-bar{
+        position: absolute;
+        z-index: -1;
+        background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
+        height: 80%;
+        width: 70%;
+        border-bottom-right-radius: 25rem;
+    }
+    
+    
+        .mobile{
+            width: 375px;
+        }
+    
+    
+        .text-box{
+            width: 70%;
+           
+        }
+        .text-box h1{
+            font-size: 40px;
+        }
+        
+        
+    }
+
+
+
+    @media screen and (min-width:800px) {
+    
+
+    
+        .background-bar{
+            position: absolute;
+            z-index: -1;
+            background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
+            height: 100%;
+            width: 35%;
+            border-bottom-right-radius: 25rem;
+        }
+        
+        
+        
+            main{
+                flex-direction: row;
+                padding:0rem;
+                justify-content: space-evenly;
+            }
+        
+        
+            .mobile{
+                max-width: 375px;
+            }
+        
+        
+            .text-box{
+                width: 30%;
+                text-align: left;
+                display: flex;
+                align-items: flex-start;
+            }
+            .text-box h1{
+                font-size: 40px;
+            }
+            
+            
+        }
+        
+        
