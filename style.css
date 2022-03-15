@@ -74,7 +74,7 @@ svg{
 
 .mobile{
     background-color:var(--White);
-    width: 350px;
+    width: 300px;
     margin: 5rem 0;
     padding: .8rem;
     border-radius: 2rem;
@@ -330,6 +330,9 @@ input{
             border-top-left-radius: 25rem;
         }
         
+        .mobile{
+            width: 350px;
+        }
         
         
             main{
